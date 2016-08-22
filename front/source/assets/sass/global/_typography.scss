@@ -1,0 +1,19 @@
+html {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: $font-primary;
+}
+
+a {
+  color: $black;
+}
+
+html,
+body,
+input,
+select,
+textarea {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}

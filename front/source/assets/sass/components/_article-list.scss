@@ -1,0 +1,26 @@
+.article-list {
+  @extend .container;
+}
+
+.article-list__article {
+  margin: 2em 0;
+  font-size: 21px;
+}
+
+.article-list__headline {
+  font-size: 28px;
+  line-height: 1.1;
+  font-family: $font-headline;
+  text-decoration: none;
+  font-weight: 300;
+  display: block;
+  max-width: 75%;
+  margin: .25em 0;
+}
+
+.article-list__meta {
+  font-family: $font-secondary;
+  text-transform: uppercase;
+  color: $gray-5;
+  font-size: 16px;
+}

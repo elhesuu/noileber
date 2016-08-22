@@ -1,0 +1,17 @@
+.header {
+  background: $white;
+  padding: 28px 0;
+  margin: 0 auto 40px;
+  border-bottom: 1px solid rgba($black, .1);
+}
+
+.header__container {
+  @extend %container;
+}
+
+.header__logo {
+  font: normal 700 21px $font-primary;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $black;
+}

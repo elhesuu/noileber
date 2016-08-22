@@ -1,0 +1,8 @@
+%container,
+.container {
+  @include respond-up(m) {
+    margin: 0 auto;
+    max-width: 900px;
+    width: 75vw;
+  }
+}

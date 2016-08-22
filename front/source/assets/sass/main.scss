@@ -1,0 +1,17 @@
+// Config
+
+@import 'global/variables',
+        'global/mixins',
+        'global/svg-icons',
+        'global/layout',
+        'global/typography',
+        'global/layout';
+
+@import 'components/container',
+        'components/header',
+        'components/footer',
+        'components/article',
+        'components/meta-field',
+        'components/categories',
+        'components/cover',
+        'components/article-list';

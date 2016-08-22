@@ -1,0 +1,22 @@
+$rem-baseline-px: 16px;
+
+$white: #fff;
+$black: #000;
+$gray-5: rgba($black, .5);
+
+$content-max-width: 1372px;
+
+$ease-in-out-quint: cubic-bezier(.86, 0, .07, 1);
+
+$font-secondary: 'Assistant', sans-serif;
+$font-primary: 'Assistant', serif;
+$font-headline: 'Merriweather', serif;
+
+// Breakpoints map for responsive helper mixins
+$breakpoints-map: (
+  xs: 400px,
+  m: 768px,
+  ml: 1044px,
+  l: $content-max-width,
+  xl: 1800
+) !default;

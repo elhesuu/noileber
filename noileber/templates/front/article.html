@@ -1,0 +1,56 @@
+{% extends 'front/base.html' %}
+{% load front_extras %}
+
+{% block content %}
+<article class="article">
+
+  <div class="article__tools">
+    <!-- zoomin -->
+    <!-- zoomout -->
+    <!-- columns -->
+    <!-- pdf -->
+  </div>
+
+  <div class="article__share">
+    <!-- facebook -->
+    <!-- twitter -->
+    <!-- reddit -->
+    <!-- pdf -->
+  </div>
+
+  <div class="article__heading">
+    <div class="article__category">
+      <a href="{% url 'category' article.category.slug %}">{{ article.category }}</a>
+    </div>
+    {% if article.pre %}
+      <p class="article__pre">{{ article.pre }}</p>
+    {% endif %}
+
+    <h1 class="article__headline">{{ article.headline }}</h1>
+
+    {% if article.lead %}
+    <div class="article__lead">
+      {{ article.lead }}
+    </div>
+    {% endif %}
+
+    <div class="article__meta">
+    {% if article.date %}
+      <span class="meta-field article__meta-field article__date">{{ article.date }}</span>
+    {% endif %}
+    {% if article.author %}
+      <span class="meta-field article__meta-field">Por {{ article.author }}</span>
+    {% endif %}
+    {% if article.source %}
+      <span class="meta-field article__meta-field">{{ article.source }}</span>
+    {% endif %}
+    </div>
+  </div>
+
+  <div class="article__body">
+   {% autoescape off %}
+     {{ article.body_raw|cleanup }}
+   {% endautoescape %}
+  </div>
+</article>
+{% endblock %}

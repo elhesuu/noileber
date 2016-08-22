@@ -1,0 +1,22 @@
+{% extends 'front/base.html' %}
+
+{% block content %}
+<div class="article-list article-list--cover">
+  {% for article in today %}
+  <div class="article-list__article">
+    <span class="article-list__category"></span>
+    <a class="article-list__headline" href="{% url 'article' article.id article.slug %}">
+      {{ article.headline }}
+    </a>
+    <div class="article-list__meta">
+      {% if article.author %}
+      <span class="meta-field">
+        Por {{ article.author }}
+      </span>
+      {% endif %}
+      <span class="meta-field">{{ article.date|date:"d/m/Y" }}</span>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

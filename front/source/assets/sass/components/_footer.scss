@@ -1,0 +1,25 @@
+.footer {
+  padding: 42px 0;
+  margin: 0 auto 40px;
+  color: rgba($black, .5);
+}
+
+.footer__container {
+  position: relative;
+  @extend %container;
+}
+
+.footer__logo {
+  font: normal 700 21px $font-primary;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba($black, .4);
+}
+
+.footer__disclaimer {
+  position: absolute;
+  top: .3em;
+  right: 0;
+  padding: 0;
+  margin: 0;
+}

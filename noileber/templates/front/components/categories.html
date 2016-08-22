@@ -1,0 +1,17 @@
+{% load front_extras %}
+
+<nav class="categories">
+  {% for group, grouped_categories in categories.items %}
+    {% if grouped_categories %}
+      <ul class="categories__items categories__items--{{ group }}">
+      {% for category in grouped_categories %}
+        <li class="categories__item">
+          <a href="{% url 'category' category.slug %}" class="categories__link">
+            {{ category.name }}
+          </a>
+        </li>
+      {% endfor %}
+      </ul>
+    {% endif %}
+  {% endfor %}
+</nav>

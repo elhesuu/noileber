@@ -1,8 +1,15 @@
 # Clon de rebelion.org
 
-Intenta proveer al sitio de una calidad de diseño equivalente a la del contenido, tratando de apuntalar una falencia evidente en rebelion.org
+Este proyecto usa Python/Django + Scrapy para el back-end y Gulp con Sass para el front-end.
 
-Usando Django y Scrapy, se:
 
-1. clonara el contenido del actual rebelion.org
-2. registrara una tarea capaz de mantener el contenido al dia
+```
+source bin/activate
+```
+
+### Crawling
+
+```
+cd rebelion
+scrapy crawl rebelion
+```

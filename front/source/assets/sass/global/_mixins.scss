@@ -1,0 +1,38 @@
+@mixin respond-up($name) {
+  $min: map-get($breakpoints-map, $name);
+
+  @if $min {
+    @media only screen and (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin respond-down($name) {
+  $max: map-get($breakpoints-map, $name);
+
+  @if $max {
+    @media only screen and (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin size($width, $height) {
+  height: $height;
+  width: $width;
+}
+
+@mixin hidpi($ratio: 1.3) {
+  @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (-o-min-device-pixel-ratio: #{$ratio}/1),
+  only screen and (min-resolution: round($ratio * 96dpi)),
+  only screen and (min-resolution: $ratio * 1dppx) {
+    @content;
+  }
+}

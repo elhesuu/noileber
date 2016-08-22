@@ -1,0 +1,19 @@
+{% extends 'front/base.html' %}
+
+{% block content %}
+<div class="article-list">
+  {% for article in articles %}
+  <div class="article-list__article">
+    <a class="article-list__headline" href="{% url 'article' article.id article.slug %}">{{ article.headline }}</a>
+    <div class="article-list__meta">
+      {% if article.author %}
+      <span class="meta-field">
+        Por {{ article.author }}
+      </span>
+      {% endif %}
+      <span class="meta-field">{{ article.date|date:"d/m/Y" }}</span>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
